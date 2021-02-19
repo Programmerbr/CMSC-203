@@ -48,6 +48,7 @@ public class NetworkConnectivityTester {
 
                if (answer == 'y') {
                    System.out.println("\nThe network connectivity was fixed. \nThank you!");
+               return;
                }
                    else
 
@@ -59,6 +60,7 @@ public class NetworkConnectivityTester {
 
                         if (answer == 'y') {
                         System.out.println("\nThe network connectivity was fixed. \nThank you!");
+                            return;
                         }
 
                         else
@@ -71,6 +73,7 @@ public class NetworkConnectivityTester {
 
                                 if (answer == 'y') {
                                 System.out.println("\nThe network connectivity was fixed. \nThank you!");
+                                    return;
                                 }
 
                                 else
@@ -83,6 +86,7 @@ public class NetworkConnectivityTester {
 
                                     if (answer == 'y') {
                                     System.out.println("\nThe network connectivity was fixed. \nThank you!");
+                                    return;
                                     }
 
                                     else
