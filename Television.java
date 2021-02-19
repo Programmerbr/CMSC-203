@@ -1,83 +1,106 @@
+import java.util.Scanner;
+
 public class Television {
 
     /** The purpose of this class ios to model a television
-     * Leonardo N Oliveira, 02/17/2020
+     * Leonardo Oliveira, 02/17/2020
      */
     private String MANUFACTURER;
-
     private int SCREEN_SIZE;
     private int channel;
     private int volume;
-
     private boolean powerOn;
 
     // Class constructor - The purpose is to initialize parameters
-    public Television(){
+    Television(String brand, int size){
 
-        powerOn = false;
+        MANUFACTURER = brand;
+        SCREEN_SIZE = size;
+
         volume = 20;
         channel = 2;
-
-    }
-
-    public Television(String MANUFACTURER, int SCREEN_SIZE) {
-
-        MANUFACTURER = "SONY";
-        SCREEN_SIZE = 56;
+        powerOn = false;
 
     }
 
 
-    public static void main (String[] args){
-
-
-}
-
-
-
-    public String Television2(String brand, int size) {
-
-        return brand;
-
-    }
-
+// This method receives information from TelevisionDemo bigScreen.setChannel(station);
     public void setChannel(int station) {
 
+        channel = station;
 
     }
 
-    public void power(){}
+    // Power on and power off the TV.
+    public void power(){
 
-    public void increaseVolume(){}
+        if (powerOn != powerOn) {
 
-    public void decreaseVolume(){}
+            powerOn = false;
 
+        }
+        else
+            powerOn = true;
+
+
+    }
+
+    // Method to increase volume by 1
+    public void increaseVolume(){
+
+        if (volume <100) {
+            volume++;
+
+            }
+
+    }
+
+    // Method to decrease volume by 1
+    public void decreaseVolume(){
+
+        if (volume >0){
+            volume--;
+
+        }
+
+    }
+
+
+    // Method to get channel
     public int getChannel() {
 
-        return getChannel();
+        //new var calling another var from the constructor
+        int getChannelReturn = channel;
+
+            return getChannelReturn;
     }
 
+    // Method to get volume.
     public int getVolume(){
 
-        return getVolume();
+        //new var calling another var from the constructor
+        int getVolumeReturn = volume;
+
+            return getVolumeReturn;
     }
 
+
+    // Method to get Manufacturer.
     public String getManufacturer(){
 
-        return getManufacturer();
+        //new var calling another var from the constructor
+        String BRAND = MANUFACTURER;
+
+            return BRAND;
     }
 
+    // Method to get screen size.
     public int getScreenSize(){
 
-        return getScreenSize();
-    }
+        //new var calling another var from the constructor
+        int SIZE = SCREEN_SIZE;
 
-
-    public int setChannel(){
-
-      channel= channel + 10;
-
-return channel;
+            return SIZE;
     }
 
 
