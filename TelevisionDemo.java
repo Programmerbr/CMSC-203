@@ -1,49 +1,72 @@
 import java.util.Scanner;
+/** This class demonstrates the Television class*/
+import java.util.Scanner;
 
-/**
- * This class tests the Television class
- */
 public class TelevisionDemo
 {
     public static void main(String[] args)
     {
-        //create a Scanner object to read from the keyboard
+//create a Scanner object to read from the keyboard
         Scanner keyboard = new Scanner (System.in);
-        //declare variables
+//declare variables
         int station; //the user’s channel choice
-        //declare and instantiate a television object
+//declare and instantiate a television object
         Television bigScreen = new Television("Toshiba", 55);
-        //turn the power on
+//turn the power on
         bigScreen.power();
-        //display the state of the television
-        System.out.println("A " + bigScreen.getScreenSize() + "-inch " +
+//display the state of the television
+        System.out.println("A " + bigScreen.getScreenSize() + " inch "+
                 bigScreen.getManufacturer() + " has been turned on.");
-        //prompt the user for input and store into station
+//prompt the user for input and store into station
         System.out.print("What channel do you want? ");
         station = keyboard.nextInt();
-        //change the channel on the television
+//change the channel on the television
         bigScreen.setChannel(station);
-        //increase the volume of the television
+      //increase the volume of the television
         bigScreen.increaseVolume();
-        //display the the current channel and volume of the television
+//display the the current channel and volume of the television
         System.out.println("Channel: " + bigScreen.getChannel() +
-                ", Volume: " + bigScreen.getVolume());
+                " Volume: " + bigScreen.getVolume());
         System.out.println("Too loud!! I am lowering the volume.");
-        //decrease the volume of the television
+//decrease the volume of the television
         bigScreen.decreaseVolume();
         bigScreen.decreaseVolume();
         bigScreen.decreaseVolume();
         bigScreen.decreaseVolume();
         bigScreen.decreaseVolume();
         bigScreen.decreaseVolume();
-        //display the current channel and volume of the television
+//display the current channel and volume of the television
         System.out.println("Channel: " + bigScreen.getChannel() +
-                ", Volume: " + bigScreen.getVolume());
+                " Volume: " + bigScreen.getVolume());
         System.out.println(); //for a blank line
+
+
+
         //HERE IS WHERE YOU DO TASK #5
 
+        //New Television Object created
+        Television portable = new Television("Sharp", 19);
+        //Television powered on
+        portable.power();
+        //Print screen size and Manufacture. Here the method are called from the Television Class.
+        System.out.println("A " + portable.getScreenSize() + " inch "+
+                portable.getManufacturer() + " has been turned on.");
+
+        //Input channel
+        System.out.print("What channel do you want? ");
+        station = keyboard.nextInt();
+
+        //call setMethod to change the station. This has the purpose to pass values to the method.
+        portable.setChannel(station);
+
+        //call Method to decrease the volume
+        portable.decreaseVolume();
+        portable.decreaseVolume();
+
+        //calling method to print new channel and new volume
+        System.out.println("Channel: " + portable.getChannel() +
+                " Volume: " + portable.getVolume());
+
+
     }
-
-
-
 }
